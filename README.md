@@ -6,7 +6,7 @@ Este é o segundo repositório de uma série de estudos. O primeiro, [ML-01-Intr
 
 ## 🎯 Objetivo
 
-Este repositório é um caderno de estudos para quem está **começando em Machine Learning e em Python**. Ao longo de 7 notebooks, construímos passo a passo um modelo que prevê se uma pessoa **ganha mais de US$ 50 mil por ano**. Cada etapa é explicada do zero.
+Este repositório é um caderno de estudos para quem está **começando em Machine Learning e em Python**. Ao longo de 7 notebooks, mais um extra, construímos passo a passo um modelo que prevê se uma pessoa **ganha mais de US$ 50 mil por ano**. Cada etapa é explicada do zero.
 
 O foco não é só chegar a um bom modelo. É **entender o porquê** de cada decisão:
 
@@ -31,12 +31,18 @@ Em relação ao California Housing do ML-01, este dataset traz desafios novos: *
 | Notebook | O que você aprende |
 |---|---|
 | [01 · Análise exploratória](01_analise_exploratoria.ipynb) | Atributos numéricos × categóricos, classes desbalanceadas, valores ausentes informativos, taxa da classe por categoria, colunas redundantes e um primeiro olhar sobre fairness |
-| [02 · Primeiro classificador](02_primeiro_classificador.ipynb) | Classificação × regressão, divisão estratificada, `StratifiedKFold`, acurácia, baseline, regressão logística, sigmoide, matriz de confusão e probabilidades |
+| [02 · Primeiro classificador](02_primeiro_classificador.ipynb) | Classificação × regressão, divisão estratificada, `StratifiedKFold`, acurácia, baseline, regressão logística, sigmoide, chances (*odds*), matriz de confusão e probabilidades |
 | [03 · Pré-processamento de categóricas](03_preprocessamento_categoricas.ipynb) | Codificação ordinal × one-hot, imputação, categorias raras e desconhecidas, `ColumnTransformer` e quando o logaritmo **não** ajuda |
 | [04 · Métricas e limiar de decisão](04_metricas_e_limiar.ipynb) | Precisão, recall, F1, limiar de decisão e custo dos erros, curvas ROC e precisão-recall, AUC e `TunedThresholdClassifierCV` |
-| [05 · Modelos de árvore](05_modelos_de_arvore.ipynb) | Árvore de decisão e impureza de Gini, random forest e `min_samples_leaf`, `HistGradientBoostingClassifier` com categorias nativas, ajuste de hiperparâmetros e dependência parcial |
-| [06 · Probabilidades e desbalanceamento](06_probabilidades_e_desbalanceamento.ipynb) | Calibração, curva de calibração, log loss e Brier score, `class_weight="balanced"` (e por que ele não ajudou) e `CalibratedClassifierCV` |
+| [05 · Outros classificadores](05_outros_classificadores.ipynb) | Fronteira de decisão, KNN (distância, k e a escala como peso), Naive Bayes (teorema de Bayes e discretização), SVM (margem e kernel), `HistGradientBoostingClassifier` com categorias nativas e dependência parcial |
+| [06 · Probabilidades e desbalanceamento](06_probabilidades_e_desbalanceamento.ipynb) | Calibração (e por que o Naive Bayes exagera), curva de calibração, log loss e Brier score, `class_weight="balanced"` (e por que ele não ajudou) e `CalibratedClassifierCV` |
 | [07 · Avaliação final e justiça](07_avaliacao_final_e_justica.ipynb) | Avaliação no teste, permutation importance, métricas de fairness por sexo e raça, variáveis substitutas (*proxies*), salvar o modelo, limitações e uso responsável |
+
+**Extra:** depois de terminar a trilha principal, aprofunde com:
+
+| Notebook | O que você aprende |
+|---|---|
+| [08 · Classificação multiclasse](08_classificacao_multiclasse.ipynb) | Dígitos escritos à mão, um contra todos × softmax, matriz de confusão 10 × 10, métricas por classe, médias macro, micro e ponderada, e por que nenhum classificador é o melhor sempre |
 
 ### Evolução dos resultados (no conjunto de teste)
 
@@ -110,7 +116,6 @@ O arquivo `requirements.txt` lista as versões exatas usadas no projeto. As prin
 | `numpy` | Cálculos numéricos |
 | `matplotlib` | Gráficos |
 | `scikit-learn` | Modelos de Machine Learning, métricas e o download do dataset |
-| `scipy` | Distribuições usadas na busca aleatória de hiperparâmetros |
 | `joblib` | Salvar e carregar o modelo final |
 | `jupyter` | Rodar os notebooks |
 
@@ -136,7 +141,7 @@ O navegador vai abrir com a lista de arquivos do projeto. Se preferir uma interf
 
 ### 2. Siga os notebooks em ordem
 
-Comece pelo **01** e siga até o **07**. Cada notebook pressupõe os conceitos dos anteriores.
+Comece pelo **01** e siga até o **07**. Cada notebook pressupõe os conceitos dos anteriores. O **08** é um extra, para depois da trilha principal.
 
 Dentro de um notebook:
 - **`Shift + Enter`** executa a célula atual e passa para a próxima.
@@ -147,7 +152,8 @@ Dentro de um notebook:
 ### Observações
 
 - **Na primeira execução**, o dataset é baixado do [OpenML](https://www.openml.org) e fica salvo em `~/scikit_learn_data`. Nas próximas vezes, não é preciso conexão.
-- **O notebook 05 demora cerca de 2 a 3 minutos**, porque treina centenas de árvores com validação cruzada. Os outros rodam em menos de 1 minuto.
+- **O notebook 05 demora cerca de 2 a 3 minutos**, principalmente por causa do KNN, que é lento para prever. Os outros rodam em menos de 1 minuto.
+- **O notebook 08 usa outro dataset**, os dígitos escritos à mão, que já vem junto com o scikit-learn (não precisa de download).
 - **O notebook 07 salva o modelo final** na pasta `modelos/` (cerca de 400 KB). Essa pasta não vai para o Git: ela é recriada sempre que o notebook 07 é executado.
 - Os notebooks já estão salvos **com os resultados**, então dá para lê-los aqui no GitHub mesmo sem executá-los.
 
@@ -159,9 +165,10 @@ ML-02-Introducao-classificacao/
 ├── 02_primeiro_classificador.ipynb
 ├── 03_preprocessamento_categoricas.ipynb
 ├── 04_metricas_e_limiar.ipynb
-├── 05_modelos_de_arvore.ipynb
+├── 05_outros_classificadores.ipynb
 ├── 06_probabilidades_e_desbalanceamento.ipynb
 ├── 07_avaliacao_final_e_justica.ipynb
+├── 08_classificacao_multiclasse.ipynb   # extra
 ├── requirements.txt      # bibliotecas e versões do projeto
 └── modelos/              # criada pelo notebook 07 (não versionada)
 ```
