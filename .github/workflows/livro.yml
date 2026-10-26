@@ -1,0 +1,45 @@
+# Gera o livro com o Jupyter Book e publica no GitHub Pages a cada push na main
+name: Publicar livro
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    env:
+      # O site fica em https://joaobleite.github.io/ML-02-Introducao-classificacao/
+      BASE_URL: /${{ github.event.repository.name }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar o Jupyter Book
+        run: pip install jupyter-book==2.1.7
+      # Os notebooks já estão salvos com os resultados, então o livro não os executa de novo
+      - name: Gerar o livro
+        run: jupyter-book build --html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _build/html
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,40 @@
+# Configuração do livro (Jupyter Book 2 / MyST)
+# Para gerar localmente: jupyter-book start   (ou jupyter-book build --html)
+version: 1
+project:
+  id: ml-02-introducao-classificacao
+  title: Introdução Prática a Machine Learning com Classificação
+  description: Uma introdução prática e didática à classificação em Machine Learning com Python e o dataset Adult Income.
+  authors:
+    - name:
+        given: João Pedro Barbosa
+        family: Leite
+  license: CC-BY-NC-SA-4.0
+  github: https://github.com/JoaoBLeite/ML-02-Introducao-classificacao
+  keywords:
+    - machine learning
+    - classificação
+    - scikit-learn
+    - adult income
+  # Botão para abrir os notebooks no Binder e executá-los no navegador
+  jupyter:
+    binder:
+      repo: JoaoBLeite/ML-02-Introducao-classificacao
+  toc:
+    - file: README.md
+    - title: Trilha principal
+      children:
+        - file: 01_analise_exploratoria.ipynb
+        - file: 02_primeiro_classificador.ipynb
+        - file: 03_preprocessamento_categoricas.ipynb
+        - file: 04_metricas_e_limiar.ipynb
+        - file: 05_outros_classificadores.ipynb
+        - file: 06_probabilidades_e_desbalanceamento.ipynb
+        - file: 07_avaliacao_final_e_justica.ipynb
+    - title: Extras
+      children:
+        - file: 08_classificacao_multiclasse.ipynb
+site:
+  template: book-theme
+  options:
+    logo_text: ML-02 · Classificação

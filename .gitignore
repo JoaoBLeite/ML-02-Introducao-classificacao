@@ -10,3 +10,6 @@ modelos/
 
 # Instruções locais do Claude Code (não versionadas)
 CLAUDE.md
+
+# Saída gerada pelo Jupyter Book (recriada com: jupyter-book build --html)
+_build/
