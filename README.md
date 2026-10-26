@@ -1,12 +1,16 @@
 # ML-02-Introducao-classificacao
 
+[![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
+
 Uma **introdução prática e didática à classificação em Machine Learning**, usando Python e o dataset **Adult Income**.
+
+📖 **Leia como livro interativo:** https://joaobleite.github.io/ML-02-Introducao-classificacao/
 
 Este é o segundo repositório de uma série de estudos. O primeiro, [ML-01-Introducao-regressao](https://github.com/JoaoBLeite/ML-01-Introducao-regressao), ensina **regressão** (prever um número). Aqui o objetivo é a **classificação**: prever uma **categoria**.
 
 ## 🎯 Objetivo
 
-Este repositório é um caderno de estudos para quem está **começando em Machine Learning e em Python**. Ao longo de 7 notebooks, mais um extra, construímos passo a passo um modelo que prevê se uma pessoa **ganha mais de US$ 50 mil por ano**. Cada etapa é explicada do zero.
+Este repositório é um caderno de estudos para quem está **começando em Machine Learning e em Python**. Ao longo de 7 notebooks, mais um extra, construímos passo a passo um modelo que prevê se uma pessoa **ganha mais de US\$ 50 mil por ano**. Cada etapa é explicada do zero.
 
 O foco não é só chegar a um bom modelo. É **entender o porquê** de cada decisão:
 
@@ -169,6 +173,7 @@ ML-02-Introducao-classificacao/
 ├── 06_probabilidades_e_desbalanceamento.ipynb
 ├── 07_avaliacao_final_e_justica.ipynb
 ├── 08_classificacao_multiclasse.ipynb   # extra
+├── myst.yml              # configuração do livro (Jupyter Book)
 ├── requirements.txt      # bibliotecas e versões do projeto
 └── modelos/              # criada pelo notebook 07 (não versionada)
 ```
@@ -176,3 +181,7 @@ ML-02-Introducao-classificacao/
 ## ⚠️ Limitações
 
 Este projeto é para **aprender**, não para tomar decisões sobre pessoas reais. Os dados são de 1994 e só dos Estados Unidos, e o modelo **reproduz as desigualdades** de renda entre homens e mulheres presentes nesses dados. O notebook 07 mede essas diferenças, mostra por que remover a coluna `sex` não resolve o problema e discute os cuidados com o uso responsável de modelos como este.
+
+## 📄 Licença
+
+Este material está sob a licença [Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional (CC BY-NC-SA 4.0)](LICENSE): você pode copiar, adaptar e redistribuir, desde que cite a autoria, não use para fins comerciais e distribua as adaptações sob a mesma licença.

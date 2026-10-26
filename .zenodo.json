@@ -1,0 +1,20 @@
+{
+  "title": "Introdução Prática a Machine Learning com Classificação",
+  "upload_type": "publication",
+  "publication_type": "book",
+  "description": "<p>Livro digital interativo, em notebooks Jupyter, que ensina classificação em Machine Learning do zero com Python e o dataset Adult Income: análise exploratória, regressão logística, pré-processamento de colunas categóricas, métricas e limiar de decisão, KNN, Naive Bayes, SVM e gradient boosting, calibração de probabilidades, classes desbalanceadas, justiça (fairness) e classificação multiclasse.</p><p>Versão on-line: <a href=\"https://joaobleite.github.io/ML-02-Introducao-classificacao/\">https://joaobleite.github.io/ML-02-Introducao-classificacao/</a></p>",
+  "creators": [
+    { "name": "Leite, João Pedro Barbosa" }
+  ],
+  "license": "cc-by-nc-sa-4.0",
+  "access_right": "open",
+  "language": "por",
+  "keywords": ["machine learning", "classificação", "scikit-learn", "python", "adult income"],
+  "related_identifiers": [
+    {
+      "identifier": "https://joaobleite.github.io/ML-02-Introducao-classificacao/",
+      "relation": "isIdenticalTo",
+      "resource_type": "publication-book"
+    }
+  ]
+}

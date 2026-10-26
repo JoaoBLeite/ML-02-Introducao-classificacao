@@ -1,0 +1,25 @@
+# Metadados de citação: usados pelo botão "Cite this repository" do GitHub
+cff-version: 1.2.0
+message: Se usar este material, cite-o com os dados abaixo.
+title: "Introdução Prática a Machine Learning com Classificação"
+abstract: >-
+  Livro digital interativo, em notebooks Jupyter, que ensina classificação em
+  Machine Learning do zero com Python e o dataset Adult Income: análise
+  exploratória, regressão logística, pré-processamento de colunas categóricas,
+  métricas e limiar de decisão, KNN, Naive Bayes, SVM e gradient boosting,
+  calibração de probabilidades, classes desbalanceadas, justiça (fairness) e
+  classificação multiclasse.
+authors:
+  - given-names: João Pedro Barbosa
+    family-names: Leite
+version: 1.0.0
+date-released: 2026-10-26
+license: CC-BY-NC-SA-4.0
+repository-code: https://github.com/JoaoBLeite/ML-02-Introducao-classificacao
+url: https://joaobleite.github.io/ML-02-Introducao-classificacao/
+keywords:
+  - machine learning
+  - classificação
+  - scikit-learn
+  - python
+  - adult income
