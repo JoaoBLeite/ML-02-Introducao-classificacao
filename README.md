@@ -1,5 +1,6 @@
 # ML-02-Introducao-classificacao
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23668183.svg)](https://doi.org/10.5281/zenodo.23668183)
 [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 
 Uma **introdução prática e didática à classificação em Machine Learning**, usando Python e o dataset **Adult Income**.
@@ -181,6 +182,14 @@ ML-02-Introducao-classificacao/
 ## ⚠️ Limitações
 
 Este projeto é para **aprender**, não para tomar decisões sobre pessoas reais. Os dados são de 1994 e só dos Estados Unidos, e o modelo **reproduz as desigualdades** de renda entre homens e mulheres presentes nesses dados. O notebook 07 mede essas diferenças, mostra por que remover a coluna `sex` não resolve o problema e discute os cuidados com o uso responsável de modelos como este.
+
+## 📝 Como citar
+
+Se usar este material, cite-o assim (ABNT):
+
+> LEITE, João Pedro Barbosa. **Introdução Prática a Machine Learning com Classificação**. Zenodo, 2026. DOI: [10.5281/zenodo.23668183](https://doi.org/10.5281/zenodo.23668183).
+
+Esse DOI sempre aponta para a versão mais recente. No GitHub, o botão **Cite this repository** gera a citação em outros formatos (APA, BibTeX).
 
 ## 📄 Licença
 

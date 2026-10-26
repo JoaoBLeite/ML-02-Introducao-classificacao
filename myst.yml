@@ -10,6 +10,7 @@ project:
         given: João Pedro Barbosa
         family: Leite
   license: CC-BY-NC-SA-4.0
+  doi: 10.5281/zenodo.23668183
   github: https://github.com/JoaoBLeite/ML-02-Introducao-classificacao
   keywords:
     - machine learning
